@@ -35,6 +35,7 @@ public class CreateNewVendor extends ProjectSpecificMethods{
         .clickVendorsMenu()
         .enterId(vendorId)
         .verifyCustomer(vendorId);
+		pause(10000);
 	}
 
 }

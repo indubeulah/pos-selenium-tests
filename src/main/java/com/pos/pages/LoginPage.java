@@ -27,6 +27,7 @@ public class LoginPage  extends ProjectSpecificMethods{
 		enterUserName(prop.getProperty("username"));
 		enterPassword(prop.getProperty("password"));
 		clickLoginButton();
+		
 		return new PointOfSalePage();
 	}
 }
