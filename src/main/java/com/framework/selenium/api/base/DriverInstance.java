@@ -40,7 +40,8 @@ public class DriverInstance{
 			dc.setPlatform(Platform.LINUX);
 			options.merge(dc);
 
-			remoteWebdriver.set(new RemoteWebDriver(new URL("http://20.244.96.41:4444"), options));
+			// remoteWebdriver.set(new RemoteWebDriver(new URL("http://20.244.96.41:4444"), options)); // Docker instance
+			remoteWebdriver.set(new RemoteWebDriver(new URL("http://20.244.97.233:32000"), options)); // k8 selenium grid
 			break;
 		case "firefox":
 			FirefoxOptions firefoxOptions = new FirefoxOptions();
@@ -48,7 +49,7 @@ public class DriverInstance{
 			desiredCap.setBrowserName("firefox");
 			desiredCap.setPlatform(Platform.LINUX);
 			firefoxOptions.merge(desiredCap);
-			remoteWebdriver.set(new RemoteWebDriver(new URL("http://20.244.96.41:4444"), firefoxOptions));
+			remoteWebdriver.set(new RemoteWebDriver(new URL("http://20.244.97.233:32000"), firefoxOptions));
 			break;
 		case "edge":
 			remoteWebdriver.set(new EdgeDriver());
